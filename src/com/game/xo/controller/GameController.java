@@ -19,10 +19,19 @@ public class GameController
     public void move()
     {
         field.showPlayers(game.getPlayers());
+        field.showStep();
+        field.showField();
     }
 
     public boolean checkWinner()
     {
         return false;
+    }
+
+    public void showWinner()
+    {
+        field.showPlayers(game.getPlayers());
+        field.showField();
+        field.showWinner();
     }
 }

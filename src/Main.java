@@ -11,5 +11,11 @@ public class Main
 
         GameController game = new GameController(player1, player2);
 
+        //while (game.checkWinner() != true) {
+            game.move();
+        //}
+
+        //game.showWinner();
+
     }
 }
