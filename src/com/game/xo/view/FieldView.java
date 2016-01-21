@@ -43,15 +43,21 @@ public class FieldView
                 System.out.println("\n~~~~~~~~~~~");
             }
         }
+
+        System.out.println();
     }
 
-    public void showWinner()
+    public void showWinner(Player player)
     {
-
+        System.out.println("Winner: " + player.getName() + " (" + player.getFigure() + ")");
     }
 
-    public void showStep()
+    public void showStep(Figure figure)
     {
-        System.out.println("Waiting for: " + field.getWhoesStep());
+        System.out.println("Waiting for: " + figure);
+    }
+
+    public void showNoWinner() {
+        System.out.println("No winner! Restart the game.");
     }
 }

@@ -10,17 +10,8 @@ public class Field
     private Figure[][] figures = new Figure[FIELD_SIZE][FIELD_SIZE];
 
     public void addFigure(Point point, Figure figure)
-            throws InvalidPointValuesException, NotNullFieldException
+            throws NotNullFieldException
     {
-        if (
-            point.getX() >= FIELD_SIZE ||
-            point.getX() < MIN_SIZE ||
-            point.getY() >= FIELD_SIZE ||
-            point.getY() < MIN_SIZE
-        ) {
-            throw new InvalidPointValuesException();
-        }
-
         if (figures[point.getX()][point.getY()] != null) {
             throw new NotNullFieldException();
         }
@@ -33,7 +24,7 @@ public class Field
         return figures;
     }
 
-    public String getWhoesStep()
+    public Figure getWhoesStep()
     {
         int x = 0;
 
@@ -45,6 +36,6 @@ public class Field
             }
         }
 
-        return x % 2 == 0? Figure.X.toString() : Figure.O.toString();
+        return x % 2 == 0? Figure.X : Figure.O;
     }
 }

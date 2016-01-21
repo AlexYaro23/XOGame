@@ -20,4 +20,9 @@ public class Game
     {
         return field;
     }
+
+    public Player getPlayerByFigure(Figure figure)
+    {
+        return players[0].getFigure() == figure ? players[0] : players[1];
+    }
 }

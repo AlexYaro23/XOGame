@@ -11,11 +11,10 @@ public class Main
 
         GameController game = new GameController(player1, player2);
 
-        //while (game.checkWinner() != true) {
+        while (game.checkWinner() != true && game.checkLastMove() == false) {
             game.move();
-        //}
+        }
 
-        //game.showWinner();
-
+        game.showWinner();
     }
 }
